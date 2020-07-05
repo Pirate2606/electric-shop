@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+      {% if "email" in error %}
+        <h1>Your email is already registerd!</h1>
+        <h2>Go to login page to login to your account.</h2>
+      {% endif %}
+      {% if "username" in error %}
+        <h1>This username is already registered!</h1>
+        <h2>Please try to register again using different username.</h2>
+      {% endif %}
+    </div>
+</div>
+
+{% endblock %}

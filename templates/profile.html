@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container" id = "profile">
+    <div class="jumbotron">
+        <img src="static/profiles/{{ file_name }}" class="rounded mx-auto d-block" alt="..." height="200px" width="200px">
+        <br>
+        <div class="col-6">
+            <h4><span style="color: blue;">Email : </span>{{ email }}</h4>
+            <h4><span style="color: blue;">Username : </span>{{ username }}</h4>
+        </div>
+        <br>
+        <div class="col-6">
+            <h5 style = "color: blue;">Change your profile picture: </h5>
+        </div>
+        <form action="/profile" method="POST" enctype="multipart/form-data">
+            <div class="input-group col-6">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" name = "thefile">
+                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                    <input class="btn btn-success" type="submit" id="inputGroupFileAddon04" value = "Submit">
+                </div>
+            </div>
+        </form>
+        <!-- <i class="far fa-edit"></i> -->
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="jumbotron">
+
+    {% if current_user.is_authenticated %}
+
+      <h2>Hi! {{ current_user.username }}, welcome to "Bijli ke dukaan" </h2>
+      <h2>Visit the product tab to view and buy our products.</h2>
+
+    {% else %}
+
+      <h1>Welcome to "Bijli ke dukaan"</h1>
+      <h2>Please login or register</h2>
+
+    {% endif %}
+
+  </div>
+</div>
+
+{% endblock %}

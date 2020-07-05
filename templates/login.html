@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class = "display-4">Log In</h1>
+        <p>Fill the form below to log in:</p>
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+              {{ form.email.label() }}{{ form.email(class = "form-control") }}
+              <ul>
+                  {% for error in form.email.errors %}
+                  <li style="color: red;">{{ error }}</li>
+                  {% endfor %}
+              </ul>
+            </div>
+            <div class="form-group">
+              {{ form.password.label() }}{{ form.password(class = "form-control") }}
+              {% if flag == True %}
+                  <h6 style="color: red;">*Wrong password</h6>
+              {% endif %}
+            </div>
+            <div class="form-group form-check">
+               {{ form.check(class="form-check-input") }} {{ form.check.label(class = "form-check-label") }}
+            </div>
+            {{ form.submit(class="btn btn-primary btn-lg") }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

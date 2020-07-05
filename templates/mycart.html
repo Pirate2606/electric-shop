@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="jumbotron">
+        <h2>MY CART</h2>
+        <ul>
+          {% for val in cart %}
+            <li id = "cart_item">{{ val }}  </li>
+            <img id = "cartImg" src="static/images/{{ val }}.png" alt="...">
+            <a id = "cartLink" href="{{ url_for('individualProduct', product = val) }}">Mujhe dabao!</a>
+          {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

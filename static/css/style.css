@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), rgba(0,0,0,0.5)), url(https://ltfepictures.s3.amazonaws.com/081a3-45872777_s.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#profile {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+.jumbotron {
+    background: none;
+    color: #bdee0d;
+}
+
+#individual {
+    max-height: 500px;
+    width: 500px;
+    border: 5px solid black;
+}
+
+#cartImg {
+    border: 5px solid black;
+}
+
+img {
+    max-height: 190px;
+    max-width: 100%;
+
+}
+
+#cartLink {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.navbar-brand {
+    margin-left: 5rem;
+    margin-left: 3rem;
+    font-size: 2rem;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: #0629e8;
+}
+
+.navbar-dark .navbar-brand {
+    color: #3e0f64;
+}
+
+.nav-link:hover {
+    color: rgba(234, 11, 11, 0.75);
+}
+
+.nav-link {
+  font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(112, 41, 198);
+}
+
+#cart_item {
+  font-size: 1.3rem;
+}
